@@ -144,4 +144,82 @@ img {
     }
 
   }
+  // home process in iscons
+  &-icon_process{
+    .process{
+      display:grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap:1.5rem;
+      text-align: center;
+
+
+    .step{
+      position:absolute;
+      top:0;
+      right:0;
+      font-size:1.5rem;
+      background-color: $main-color;
+      border-radius:50%;
+      height: 0.8rem;
+      width:0.7rem;
+      line-height: 0.7rem;
+      padding:1rem;
+      transition:all 1s;
+    }
+    &-icon{
+      border-radius:50%;
+      background:$dark-color;
+      color:#fff;
+      padding:2rem;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      position:relative; 
+      transition:all 1s;
+
+      
+      &:hover{
+        background:$main-color;
+        width:90px;
+        height: 90px;
+        line-height: 90px;
+        
+        .step{
+          background:$dark-color;
+        }
+      }
+    }
+    }
+  }
+}
+
+// footer
+
+#main-footer{
+  background:$dark-color;
+  color:#fff;
+  height:5rem;
+
+  .footer-content{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+ 
+    .social .fab{
+      margin-right:1rem;
+      border: 2px #fff solid;
+      border-radius:50%;
+      height: 20px;
+      width:20px;
+      line-height: 20px;
+      text-align: center ;
+      padding:0.5rem;
+
+      &:hover{
+        background:$main-color;
+      }
+    }
+  }
 }
