@@ -94,3 +94,54 @@ img {
 }
 }
 }
+
+
+// home sections
+#home {
+  // home specialise
+  &-spec{
+    .specials{
+      margin-top:3rem;
+      display:grid;
+      grid-gap:1rem;
+      grid-template-columns: repeat(4,1fr);
+
+      .fas{
+        color:$main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+  // stats section
+  &-stats{
+
+    .stat{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    }
+
+    li{
+      line-height: 2;
+      &.stats-title{
+        font-size:1.4rem;
+      }
+
+      &.stats-number{
+        font-size:2rem;
+        font-weight: bold;
+      }
+    }
+
+    div{
+      padding:3rem 0;
+
+     &:nth-child(odd){
+       background: $light-color;
+     }
+     &:nth-child(even){
+      background: $medium-color;
+    }
+    }
+
+  }
+}
