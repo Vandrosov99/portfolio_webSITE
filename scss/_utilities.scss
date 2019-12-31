@@ -44,3 +44,38 @@ input[class^='btn']:hover{
     text-align:center;
 
 }
+
+.text-center {
+    text-align:center;
+}
+// padding
+.py {
+    &-1{
+        padding: 1rem 0 ;
+    }
+    &-2{
+        padding: 2rem 0 ;
+    }
+    &-3{
+        padding: 3rem 0 ;
+    }
+    &-4{
+        padding: 4rem 0 ;
+    }
+}
+
+// margin
+.my {
+    &-1{
+        margin: 1rem 0 ;
+    }
+    &-2{
+        margin: 2rem 0 ;
+    }
+    &-3{
+        margin: 3rem 0 ;
+    }
+    &-4{
+        margin: 4rem 0 ;
+    }
+}
