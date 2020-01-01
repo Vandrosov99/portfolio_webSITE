@@ -159,6 +159,7 @@ img {
       right:0;
       font-size:1.5rem;
       background-color: $main-color;
+      color: set-text-color($main-color);
       border-radius:50%;
       height: 0.8rem;
       width:0.7rem;
@@ -169,7 +170,7 @@ img {
     &-icon{
       border-radius:50%;
       background:$dark-color;
-      color:#fff;
+      color:set-text-color($dark-color);
       padding:2rem;
       width: 70px;
       height: 70px;
@@ -186,6 +187,7 @@ img {
         
         .step{
           background:$dark-color;
+          color:set-text-color($dark-color);
         }
       }
     }
