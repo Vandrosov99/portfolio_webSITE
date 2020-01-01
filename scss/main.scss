@@ -74,172 +74,316 @@ img {
 
 // header
 #header {
-// header - home
-&-home{
-  height:100vh;
-  background: $bg-image no-repeat center right / cover;
-  color:#fff;
 
-// header - content
-.header-content{
-  text-align: center;
-  padding-top: 20%;
+  // header - home
+  &-home {
+    height: 100vh;
+    background: $bg-image no-repeat center right / cover;
+    color: #fff;
 
-  h1{
-    font-size:4rem;
-    line-height:1.2;
+    // header - content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+
+      // header-inner
+    }
   }
 
-// header-inner
-}
-}
+  &-inner {
+    height: 5.5rem;
+    background: $bg-image no-repeat 20% 30% / cover;
+    color: #fff;
+    border-bottom: 2px $main-color solid;
+  }
 }
 
 
 // home sections
 #home {
-  // home specialise
-  &-spec{
-    .specials{
-      margin-top:3rem;
-      display:grid;
-      grid-gap:1rem;
-      grid-template-columns: repeat(4,1fr);
 
-      .fas{
-        color:$main-color;
+  // home specialise
+  &-spec {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      .fas {
+        color: $main-color;
         padding-bottom: 0.4rem;
       }
     }
   }
+
   // stats section
-  &-stats{
+  &-stats {
 
-    .stat{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    }
+    .stat {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
 
-    li{
-      line-height: 2;
-      &.stats-title{
-        font-size:1.4rem;
+
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.4rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
       }
 
-      &.stats-number{
-        font-size:2rem;
-        font-weight: bold;
+      div {
+        padding: 3rem 0;
+
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+
+        &:nth-child(even) {
+          background: $medium-color;
+        }
       }
-    }
 
-    div{
-      padding:3rem 0;
-
-     &:nth-child(odd){
-       background: $light-color;
-     }
-     &:nth-child(even){
-      background: $medium-color;
     }
-    }
-
   }
+
   // home process in iscons
-  &-icon_process{
-    .process{
-      display:grid;
-      grid-template-columns: repeat(4,1fr);
-      grid-gap:1.5rem;
+  &-icon_process {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
       text-align: center;
 
 
-    .step{
-      position:absolute;
-      top:0;
-      right:0;
-      font-size:1.5rem;
-      background-color: $main-color;
-      color: set-text-color($main-color);
-      border-radius:50%;
-      height: 0.8rem;
-      width:0.7rem;
-      line-height: 0.7rem;
-      padding:1rem;
-      transition:all 1s;
-    }
-    &-icon{
-      border-radius:50%;
-      background:$dark-color;
-      color:set-text-color($dark-color);
-      padding:2rem;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      position:relative; 
-      transition:all 1s;
+      .step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5rem;
+        background-color: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 0.8rem;
+        width: 0.7rem;
+        line-height: 0.7rem;
+        padding: 1rem;
+        transition: all 1s;
+      }
 
-      
-      &:hover{
-        background:$main-color;
-        width:90px;
-        height: 90px;
-        line-height: 90px;
-        
-        .step{
-          background:$dark-color;
-          color:set-text-color($dark-color);
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        position: relative;
+        transition: all 1s;
+
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
         }
       }
-    }
     }
   }
 }
 
+
+// ABOUT
+
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        'bio-image bio bio'
+        'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+
+      p {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      h4,
+      h3 {
+        padding-top: 15px;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
+      .fas {
+        margin-bottom: 25px;
+      }
+    }
+
+    // grid area
+
+    .bio-image {
+      grid-area: bio-image;
+    }
+
+    .bio {
+      grid-area: bio;
+      border-left: 2px $main-color solid;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+
+    .award-2 {
+      grid-area: aw2;
+    }
+
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
+  // About - b
+  &-b {
+    color: $light-color;
+    background: set-text-color($light-color);
+
+    .progress {
+      height: 20px;
+      background-color: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.3rem;
+      width: 100%;
+
+      div {
+        background: $main-color;
+        height: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  &-d {
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      div> {
+        p {
+          border: 1px $medium-color solid;
+          border-radius: 5px;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
 // footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
 
-#main-footer{
-  background:$dark-color;
-  color:#fff;
-  height:5rem;
-
-  .footer-content{
-    display:flex;
+  .footer-content {
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
     height: 5rem;
     align-items: center;
- 
-    .social{
 
-      .fab{
-      margin-right:1rem;
-      border: 2px #fff solid;
-      border-radius:50%;
-      height: 20px;
-      width:20px;
-      line-height: 20px;
-      text-align: center ;
-      padding:0.5rem;
-      
-        
-      &:hover{
-        background:$light-color;
+    .social {
+
+      .fab {
+        margin-right: 1rem;
+        border: 2px #fff solid;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        padding: 0.5rem;
+
+
+        &:hover {
+          background: $light-color;
+        }
+
+
       }
 
-      
-    }
-    .fa-twitter{
-      color:#1DA1F2;
-    }
-    .fa-facebook{
-      color:#3b5998	
-    }
-    .fa-instagram{
-      color: #FD1D1D;
-    }
-    .fa-linkedin{
-      color:#2867B2
+      .fa-twitter {
+        color: #1DA1F2;
+      }
+
+      .fa-facebook {
+        color: #3b5998
+      }
+
+      .fa-instagram {
+        color: #FD1D1D;
+      }
+
+      .fa-linkedin {
+        color: #2867B2
+      }
     }
   }
-}
 }
