@@ -221,4 +221,12 @@ img {
       text-align: center;
       padding: 0.5rem; }
       #main-footer .footer-content .social .fab:hover {
-        background: #ffbc00; }
+        background: #f4f4f4; }
+    #main-footer .footer-content .social .fa-twitter {
+      color: #1DA1F2; }
+    #main-footer .footer-content .social .fa-facebook {
+      color: #3b5998; }
+    #main-footer .footer-content .social .fa-instagram {
+      color: #FD1D1D; }
+    #main-footer .footer-content .social .fa-linkedin {
+      color: #2867B2; }
