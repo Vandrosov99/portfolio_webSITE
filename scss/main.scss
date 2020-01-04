@@ -100,7 +100,10 @@ img {
     background: $bg-image no-repeat 20% 30% / cover;
     color: #fff;
     border-bottom: 2px $main-color solid;
+
+
   }
+
 }
 
 
@@ -122,6 +125,9 @@ img {
     }
   }
 
+  // #home-stats .stat .stats-number div {
+  //   background: red;
+  // }
   // stats section
   &-stats {
 
@@ -129,18 +135,33 @@ img {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
 
+      ul {
+        display: flex;
+        flex-direction: column;
+
+      }
 
       li {
         line-height: 2;
 
         &.stats-title {
           font-size: 1.4rem;
+          flex-basis: 90px;
+          flex-shrink: 0;
         }
 
         &.stats-number {
           font-size: 2rem;
           font-weight: bold;
+          flex-basis: 80px;
+          flex-shrink: 0;
+          background: red;
+
+          div {
+            background: red;
+          }
         }
+
       }
 
       div {
@@ -153,6 +174,7 @@ img {
         &:nth-child(even) {
           background: $medium-color;
         }
+
       }
 
     }
@@ -560,3 +582,8 @@ img {
     }
   }
 }
+
+
+
+// impot media queries
+@import 'media'

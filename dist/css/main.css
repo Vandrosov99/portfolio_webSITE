@@ -170,13 +170,23 @@ img {
 #home-stats .stat {
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
+  #home-stats .stat ul {
+    display: flex;
+    flex-direction: column; }
   #home-stats .stat li {
     line-height: 2; }
     #home-stats .stat li.stats-title {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      flex-basis: 90px;
+      flex-shrink: 0; }
     #home-stats .stat li.stats-number {
       font-size: 2rem;
-      font-weight: bold; }
+      font-weight: bold;
+      flex-basis: 80px;
+      flex-shrink: 0;
+      background: red; }
+      #home-stats .stat li.stats-number div {
+        background: red; }
   #home-stats .stat div {
     padding: 3rem 0; }
     #home-stats .stat div:nth-child(odd) {
@@ -434,3 +444,69 @@ img {
       color: #FD1D1D; }
     #main-footer .footer-content .social .fa-linkedin {
       color: #2867B2; }
+
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem; }
+    #header-home .header-content {
+      padding-top: 5rem; } }
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center; }
+    #main-nav li {
+      padding: 1rem; }
+  #header-home {
+    height: 10rem;
+    border-bottom: 3px solid #ffbc00;
+    background-position: 20% 30%; }
+    #header-home .header-content {
+      display: none; }
+  #header-inner {
+    height: 10rem;
+    background-position: 20% 30%; }
+  #home-spec .specials,
+  #home-stats .stat,
+  #home-icon_process .process,
+  #contact-b .contact-info,
+  #about-d .testimonials,
+  .items {
+    grid-template-columns: 1fr; }
+  #home-spec .specials div {
+    border-bottom: 1px #ccc solid;
+    padding-bottom: 1rem; }
+  #home-spec .specials div:last-child {
+    border: none; }
+  #home-stats .stat div {
+    padding: 2rem 0 1rem 0; }
+  #about-a .about-info {
+    grid-template-areas: 'bio-image' 'bio' 'aw1' 'aw2' 'aw3'; }
+  #about-c {
+    display: none; }
+  #contact-a .form .text-fields {
+    grid-template-areas: 'name' 'subject' 'email' 'phone' 'message'; }
+  #contact-a .form .text-input {
+    border: 1px #ccc solid; }
+  #contact-b .contact-info div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px #ccc solid; }
+  #contact-b .contact-info div:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #main-footer {
+    height: 7rem; }
+    #main-footer .footer-content {
+      flex-direction: column;
+      height: 5rem;
+      padding: 1rem; } }
+
+@media (max-height: 580px) {
+  #header-home .header-content {
+    padding-top: 3rem; } }
+
+@media (max-height: 320px) {
+  #header-home .header-content h1 {
+    font-size: 2rem; } }
